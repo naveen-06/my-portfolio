@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/2f668ed67d.js" crossorigin="anonymous"></script>
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="app.js" defer></script>
+  <title>naveen // portfolio</title>
+</head>
+<body>
+  <div class="app">
+    <div class="menu__bar menu__bar--hidden">
+      <a href="#home" class="link">Home</a>
+      <a href="#section--1" class="link">About</a>
+      <a href="#section--2" class="link">Latest Work</a>
+      <a href="#section--3" class="link">Contact</a>
+    </div>
+    <div class="overlay overlay--hidden"></div>
+    <header class="header wrapper" id="home">
+      <nav class="navbar">
+        <div class="logo">
+          <h1>N.</h1>
+        </div>
+        <div>
+          <i class="fas fa-bars menu__icon"></i>
+        </div>
+      </nav>
+      <div class="image__container">
+        <img class="image" src="https://image.freepik.com/free-vector/programmers-concept-illustration-web-developer-character_182268-25.jpg" alt="illsutration">
+      </div>
+      <div class="header__content">
+        <span class="text">Hello,</span>
+        <h1 class="name">I'm Naveen</h1>
+        <p class="role">frontend web developer and designer</p>
+        <button class="btn know__more">Know More</button>
+      </div>
+    </header>
+    <section id="section--1" class="about wrapper">
+      <h2 class="title">About</h2>
+      <p class="sub__title">How I get into web designing and development</p>
+      <div class="about__content">
+        <blockquote class="text">"Got inspired by looking at the website layout, design and how it works, turns my passion into development and designing.</blockquote>
+      </div>
+      <div class="about__content">
+        <blockquote class="text">"Technologies familiar to work with are HTML, CSS, JAVASCRIPT, REACT"</blockquote>
+      </div>
+      <div class="btn__container">
+        <a href="more.html" class="btn">More Story</a>
+      </div>
+    </section>
+    <section id="section--2" class="works wrapper">
+      <div class="works__content">
+        <h2 class="title">Latest Works</h2>
+        <p class="sub__title">Project developed recently</p>
+        <div class="slider__container">
+          <div class="slide">
+            <blockquote class="text">"Color picker - pick random color from popular collection. Make own palettes for future projects."</blockquote>
+            <div class="btn__container btn__container--center">
+              <a href="https://naveen-06.github.io/color-picker/" class="btn">View Application</a>
+            </div>
+          </div>
+          <div class="slide">
+            <blockquote class="text">"Taste Corner - E-commerce application, allows to order, make a wishlist. Created using React framework."</blockquote>
+            <div class="btn__container btn__container--center">
+              <a href="https://naveen-06.github.io/taste-corner/" class="btn">View Application</a>
+            </div>
+          </div>
+        </div>
+        <div class="dots__container">
+          <div class="dot dot--active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+        <div class="image__container">
+          <img class="image" src="https://i.pinimg.com/originals/dd/01/a1/dd01a1ef021bcf2c7d8e9e9d391d2910.png" alt="latest works">
+        </div>
+      </div>
+    </section>
+    <section id="section--3" class="contact wrapper">
+      <div class="contact__content">
+        <h2 class="title">Contact</h2>
+        <p class="sub__title">Have project? Hire me</p>
+      </div>
+      <div class="contact__content">
+        <p class="text contact__detail">Email: <span class="email">snaveen1994@gmail.com</span></p>
+        <p class="text contact__detail">Phone: +91 - 6385540612</p>
+      </div>
+    </section>
+    <footer class="footer wrapper">
+      <div class="footer__content">
+        <span class="text copy__write">&copy; copywrite 2021 by naveen</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

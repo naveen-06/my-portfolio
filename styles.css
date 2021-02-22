@@ -1,0 +1,288 @@
+:root {
+  --color-one: #393e46;
+  --color-two: royalblue;
+  --color-three: #ffffff;
+  --color-four: #58ffe9;
+  --color-five: #7c7c7c;
+
+  --gradient: linear-gradient(
+    to bottom right,
+    var(--color-two),
+    var(--color-six)
+  );
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--color-three);
+  box-sizing: border-box;
+  color: var(--color-one);
+  font-family: "Quicksand", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-one);
+  font-weight: bold;
+  margin-left: 0.2rem;
+}
+
+blockquote {
+  width: 75vw;
+  margin: auto;
+  font-style: italic;
+  padding-top: 2.2rem;
+}
+
+.wrapper {
+  min-height: 100vh;
+  padding: 1.5rem;
+  border-bottom: solid 0.1px gray;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sticky--navbar {
+  width: 100%;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: white;
+  box-shadow: 0 0 3px var(--color-five);
+  animation: moveIn 0.3s linear;
+}
+
+.image__container {
+  width: 85%;
+  height: 85%;
+  margin: auto;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+.about,
+.works,
+.contact {
+  padding-top: 5rem;
+  line-height: 1.6rem;
+}
+
+.works__content {
+  position: relative;
+}
+
+.slider__container {
+  width: 100%;
+  min-height: 40vh;
+  margin: 2rem auto;
+  position: relative;
+
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 1s;
+}
+
+.contact,
+.footer {
+  background-color: var(--color-one);
+  min-height: 20vh;
+  padding: 2rem;
+  color: var(--color-three);
+  text-align: center;
+}
+
+.contact {
+  text-align: left;
+  border-bottom: solid 0.1px rgb(66, 66, 66);
+}
+
+.contact__content {
+  padding: 1rem 0;
+}
+
+.contact__detail {
+  color: white;
+}
+
+.email {
+  text-decoration: underline;
+}
+
+/* Title Sub-title */
+.name {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.role {
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  color: var(--color-five);
+}
+
+.title {
+  color: var(--color-two);
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding-bottom: 0.5rem;
+}
+
+.sub__title {
+  font-size: 1.4rem;
+  color: var(--color-five);
+}
+
+.text {
+  color: var(--color-five);
+  font-size: 1.1rem;
+}
+
+.text__inverted {
+  color: white;
+}
+
+.copy__write {
+  font-size: 0.75rem;
+}
+
+/* Button */
+.btn {
+  background: var(--color-two);
+  border: none;
+  border-radius: 0.2rem;
+  color: var(--color-three);
+  font-weight: bold;
+  font-size: 0.95rem;
+  padding: 0.85rem 2rem;
+  outline: none;
+}
+
+.btn__container {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.btn__container--center {
+  text-align: center;
+}
+
+.slider__btns {
+  text-align: center;
+}
+
+/* Dot */
+.dots__container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50px;
+  background-color: rgb(189, 189, 189);
+  margin: 0 0.5rem;
+}
+
+.dot--active {
+  background-color: grey;
+}
+
+/* Menu bar */
+.menu__bar {
+  background-color: var(--color-one);
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  transition: all 1s, transform 0.2s;
+  z-index: 1000;
+  animation: moveIn 0.3s linear;
+}
+
+.link {
+  color: var(--color-three);
+  padding: 1.2rem 0;
+  text-align: center;
+}
+
+/* Overlay */
+.overlay {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+  background-color: #0000004d;
+  backdrop-filter: blur(0.1rem);
+}
+
+.menu__bar--hidden,
+.overlay--hidden {
+  display: none;
+}
+
+@keyframes moveIn {
+  0% {
+    transform: translateY(-5rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .wrapper {
+    padding: 1.5rem 20rem;
+  }
+
+  .about,
+  .works,
+  .contact {
+    padding-top: 8rem;
+    line-height: 1.6rem;
+  }
+
+  blockquote {
+    width: 35vw;
+  }
+
+  .about__content,
+  .slide {
+    width: 35vw;
+    margin: auto;
+  }
+}
