@@ -1,5 +1,7 @@
 'use strict'
 
+// my-portfolio
+
 const navbar = document.querySelector('.navbar');
 const header = document.querySelector('.header');
 const menubar = document.querySelector('.menu__bar');
